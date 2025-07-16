@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .order-table table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  

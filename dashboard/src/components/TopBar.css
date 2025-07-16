@@ -1,0 +1,6 @@
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .indices-container {
+      display: none !important;
+    }
+  }
+  
