@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_URL ="http://localhost:3002"; // Update with your Render backend URL
+const API_URL ="https://zerodha-clone-full-stack-backend.onrender.com"; // Update with your Render backend URL
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -30,7 +30,7 @@ const Login = () => {
       setSuccess(true);
 
       setTimeout(() => {
-        window.location.href = "http://localhost:3001"; // Redirect after login
+        window.location.href = "https://zerodha-clone-full-stack-dashboard.onrender.com"; // Redirect after login
       }, 2000);
     } catch (error) {
       console.log(error);

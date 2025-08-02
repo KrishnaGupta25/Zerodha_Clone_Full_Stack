@@ -19,7 +19,7 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:3001"], // ✅ allow frontend origin
+  origin: ["https://zerodha-clone-full-stack-madeby-krishna.onrender.com", "https://zerodha-clone-full-stack-dashboard.onrender.com"], // ✅ allow frontend origin
   credentials: true,               // ✅ allow cookies / auth headers
 };
 

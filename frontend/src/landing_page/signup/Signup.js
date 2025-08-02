@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:3002"; // Updated API URL
+const API_URL = "https://zerodha-clone-full-stack-backend.onrender.com"; // Updated API URL
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ const Signup = () => {
 
       if (data.success) {
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          window.location.href = "https://zerodha-clone-full-stack-dashboard.onrender.com";
         }, 2000);
       }
     } catch (error) {
