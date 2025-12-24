@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const API_URL ="https://zerodha-clone-6f98.onrender.com"; // Update with your Render backend URL
@@ -83,7 +84,7 @@ const Login = () => {
         </form>
 
         <p className="text-center mt-3">
-          Don't have an account? <a href="/signup">Sign Up</a>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
         </p>
       </div>
     </div>
