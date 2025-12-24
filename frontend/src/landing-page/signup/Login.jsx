@@ -31,7 +31,7 @@ const Login = () => {
       setSuccess(true);
 
       setTimeout(() => {
-        window.location.href = "https://dashboard-plum-iota.vercel.app/"; // Redirect after login
+        window.location.href = "https://zerodha-clone-full-stack-dashboard.onrender.com/"; // Redirect after login
       }, 2000);
     } catch (error) {
       console.log(error);

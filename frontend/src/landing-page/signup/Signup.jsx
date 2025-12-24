@@ -33,7 +33,7 @@ const Signup = () => {
 
       if (data.success) {
         setTimeout(() => {
-          window.location.href = "https://dashboard-plum-iota.vercel.app/";
+          window.location.href = "https://zerodha-clone-full-stack-dashboard.onrender.com/";
         }, 2000);
       }
     } catch (error) {
