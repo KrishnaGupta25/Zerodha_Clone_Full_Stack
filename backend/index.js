@@ -22,6 +22,8 @@ const allowedOrigins = [
   "https://frontend-f4bkx7xom-lalit-routs-projects.vercel.app",
   "https://dashboard-plum-iota.vercel.app",
   "https://dashboard-8jy230lg2-lalit-routs-projects.vercel.app",
+  "https://zerodha-clone-full-stack-madeby-krishna.onrender.com",
+  "https://zerodha-clone-full-stack-dashboard.onrender.com",
 ];
 
 // ✅ CORS Configuration
