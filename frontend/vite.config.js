@@ -8,4 +8,13 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
   },
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        // Suppress warnings
+        if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return;
+        warn(warning);
+      }
+    }
+  }
 });
