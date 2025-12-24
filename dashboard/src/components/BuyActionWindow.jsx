@@ -8,7 +8,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
   const [error, setError] = useState(null);
-  const { closeBuyWindow } = useContext(GeneralContext);
+  const { closeBuyWindow, refreshOrders } = useContext(GeneralContext);
   const navigate = useNavigate();
 
   const handleBuyClick = async () => {
@@ -23,6 +23,7 @@ const BuyActionWindow = ({ uid }) => {
         }
       );
       console.log("Order placed:", response.data);
+      refreshOrders(); // Trigger refresh
       closeBuyWindow();
     } catch (err) {
       console.error("Error placing order:", err);

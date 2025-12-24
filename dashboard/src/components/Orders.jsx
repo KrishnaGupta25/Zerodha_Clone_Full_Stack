@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import GeneralContext from "./GeneralContext";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
+  const { shouldRefreshOrders } = useContext(GeneralContext);
 
   useEffect(() => {
     axios
       .get("https://zerodha-clone-full-stack-backend.onrender.com/allOrders")
       .then((res) => setAllOrders(res.data))
       .catch((err) => console.error("Error fetching orders:", err));
-  }, []);
+  }, [shouldRefreshOrders]);
 
   return (
     <>
