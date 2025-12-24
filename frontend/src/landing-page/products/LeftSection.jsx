@@ -22,7 +22,7 @@ function LeftSection({
           <div className="">
             <a
               className="text-decoration-none opacity-100 hover-opacity-50"
-              href="https://dashboard-8jy230lg2-lalit-routs-projects.vercel.app/"
+              href="https://zerodha-clone-full-stack-dashboard.onrender.com/"
             >
               {tryDemo} 
             </a>
