@@ -6,7 +6,7 @@ const Positions = () => {
 
   useEffect(() => {
     axios
-      .get("https://zerodha-clone-6f98.onrender.com/allPositions") // ✅ Fixed API URL
+      .get("https://zerodha-clone-full-stack-backend.onrender.com/allPositions")
       .then((res) => setAllPositions(res.data))
       .catch((err) => console.error("Error fetching positions:", err));
   }, []);

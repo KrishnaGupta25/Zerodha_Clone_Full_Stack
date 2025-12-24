@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL ="https://zerodha-clone-6f98.onrender.com"; // Update with your Render backend URL
+const API_URL = "https://zerodha-clone-full-stack-backend.onrender.com"; // Updated backend URL
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });

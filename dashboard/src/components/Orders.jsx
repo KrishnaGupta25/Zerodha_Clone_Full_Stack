@@ -7,7 +7,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("https://zerodha-clone-6f98.onrender.com/allOrders")
+      .get("https://zerodha-clone-full-stack-backend.onrender.com/allOrders")
       .then((res) => setAllOrders(res.data))
       .catch((err) => console.error("Error fetching orders:", err));
   }, []);
