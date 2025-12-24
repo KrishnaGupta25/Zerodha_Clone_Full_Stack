@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import GeneralContext from "./GeneralContext";
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
+  const { shouldRefreshOrders } = useContext(GeneralContext);
 
   useEffect(() => {
     axios
       .get("https://zerodha-clone-full-stack-backend.onrender.com/allPositions")
       .then((res) => setAllPositions(res.data))
       .catch((err) => console.error("Error fetching positions:", err));
-  }, []);
+  }, [shouldRefreshOrders]);
 
   const formatNumber = (num) =>
     num.toLocaleString("en-IN", { minimumFractionDigits: 2 });

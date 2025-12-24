@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
+import GeneralContext from "./GeneralContext";
 
 const API_URL = "https://zerodha-clone-full-stack-backend.onrender.com";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
   const [error, setError] = useState(null);
+  const { shouldRefreshOrders } = useContext(GeneralContext);
 
   useEffect(() => {
     const fetchHoldings = async () => {
@@ -21,7 +23,7 @@ const Holdings = () => {
     };
 
     fetchHoldings();
-  }, []);
+  }, [shouldRefreshOrders]);
 
   if (error) {
     return <h3 className="error">{error}</h3>;
