@@ -122,7 +122,7 @@ app.post("/signup", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
     });
 
     res.status(201).json({ message: "Signup successful", success: true, user });
@@ -155,7 +155,7 @@ app.post("/login", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
     });
 
     res.status(200).json({ message: "User logged in successfully", user });
